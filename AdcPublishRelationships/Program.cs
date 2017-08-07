@@ -14,204 +14,198 @@ namespace AdcPublishRelationships
     static class Program
     {
         private const string SampleAssetA = @"
-{
-  ""properties"" : {
+{{
+  ""properties"" : {{
     ""fromSourceSystem"" : false,
     ""name"": ""Customers"",
-    ""dataSource"": {
+    ""dataSource"": {{
       ""sourceType"": ""SQL Server"",
       ""objectType"": ""Table"",
-    },
-    ""dsl"": {
+    }},
+    ""dsl"": {{
       ""protocol"": ""tds"",
       ""authentication"": ""windows"",
-      ""address"": {
+      ""address"": {{
         ""server"": ""test.contoso.com"",
         ""database"": ""Northwind"",
         ""schema"": ""dbo"",
         ""object"": ""Customers""
-      }
-    },
-    ""lastRegisteredBy"": {
-      ""upn"": ""user1@contoso.com"",
-      ""firstName"": ""User1FirstName"",
-      ""lastName"": ""User1LastName""
-    }
-  },
-  ""annotations"" : {
-    ""schema"": {
-      ""properties"" : {
+      }}
+    }},
+    ""lastRegisteredBy"": {{
+      ""upn"": ""{0}""
+    }}
+  }},
+  ""annotations"" : {{
+    ""schema"": {{
+      ""properties"" : {{
         ""fromSourceSystem"" : false,
         ""columns"": [
-          {
+          {{
             ""name"": ""ID"",
             ""isNullable"": true,
             ""type"": ""int"",
             ""maxLength"": 4,
             ""precision"": 10
-          },
-          {
+          }},
+          {{
             ""name"": ""Name"",
             ""isNullable"": true,
             ""type"": ""nvarchar"",
             ""maxLength"": 100,
             ""precision"": 0
-          },
-          {
+          }},
+          {{
             ""name"": ""PostalCode"",
             ""isNullable"": true,
             ""type"": ""varchar"",
             ""maxLength"": 10,
             ""precision"": 0
-          }
+          }}
         ]
-      }
-    },
+      }}
+    }},
     ""tags"": [
-      {
-        ""properties"": {
+      {{
+        ""properties"": {{
           ""tag"": ""ADCSample"",
           ""fromSourceSystem"": false,
           ""key"": ""64f9f46341774e3bbf413fea50c98766--adcsample""
-        }
-      }
+        }}
+      }}
     ]
-  }
-}
+  }}
+}}
 ";
 
         private const string SampleAssetB = @"
-{
-  ""properties"" : {
+{{
+  ""properties"" : {{
     ""fromSourceSystem"" : false,
     ""name"": ""Orders"",
-    ""dataSource"": {
+    ""dataSource"": {{
       ""sourceType"": ""SQL Server"",
       ""objectType"": ""Table"",
-    },
-    ""dsl"": {
+    }},
+    ""dsl"": {{
       ""protocol"": ""tds"",
       ""authentication"": ""windows"",
-      ""address"": {
+      ""address"": {{
         ""server"": ""test.contoso.com"",
         ""database"": ""Northwind"",
         ""schema"": ""dbo"",
         ""object"": ""Orders""
-      }
-    },
-    ""lastRegisteredBy"": {
-      ""upn"": ""user1@contoso.com"",
-      ""firstName"": ""User1FirstName"",
-      ""lastName"": ""User1LastName""
-    }
-  },
-  ""annotations"" : {
-    ""schema"": {
-      ""properties"" : {
+      }}
+    }},
+    ""lastRegisteredBy"": {{
+      ""upn"": ""{0}""
+    }}
+  }},
+  ""annotations"" : {{
+    ""schema"": {{
+      ""properties"" : {{
         ""fromSourceSystem"" : false,
         ""columns"": [
-          {
+          {{
             ""name"": ""ID"",
             ""isNullable"": false,
             ""type"": ""int"",
             ""maxLength"": 4,
             ""precision"": 10
-          },
-          {
+          }},
+          {{
             ""name"": ""Reference"",
             ""isNullable"": true,
             ""type"": ""varchar"",
             ""maxLength"": 10,
             ""precision"": 0
-          },
-          {
+          }},
+          {{
             ""name"": ""Amount"",
             ""isNullable"": true,
             ""type"": ""money"",
             ""maxLength"": 8,
             ""precision"": 15
-          }
+          }}
         ]
-      }
-    },
+      }}
+    }},
     ""tags"": [
-      {
-        ""properties"": {
+      {{
+        ""properties"": {{
           ""tag"": ""ADCSample"",
           ""fromSourceSystem"": false,
           ""key"": ""64f9f46341774e3bbf413fea50c98766--adcsample""
-        }
-      }
+        }}
+      }}
     ]
-  }
-}
+  }}
+}}
 ";
 
         private const string SampleAssetC = @"
-{
-  ""properties"" : {
+{{
+  ""properties"" : {{
     ""fromSourceSystem"" : false,
     ""name"": ""Transactions"",
-    ""dataSource"": {
+    ""dataSource"": {{
       ""sourceType"": ""SQL Server"",
       ""objectType"": ""Table"",
-    },
-    ""dsl"": {
+    }},
+    ""dsl"": {{
       ""protocol"": ""tds"",
       ""authentication"": ""windows"",
-      ""address"": {
+      ""address"": {{
         ""server"": ""test.contoso.com"",
         ""database"": ""Northwind"",
         ""schema"": ""dbo"",
         ""object"": ""Transactions""
-      }
-    },
-    ""lastRegisteredBy"": {
-      ""upn"": ""user1@contoso.com"",
-      ""firstName"": ""User1FirstName"",
-      ""lastName"": ""User1LastName""
-    }
-  },
-  ""annotations"" : {
-    ""schema"": {
-      ""properties"" : {
+      }}
+    }},
+    ""lastRegisteredBy"": {{
+      ""upn"": ""{0}""
+    }}
+  }},
+  ""annotations"" : {{
+    ""schema"": {{
+      ""properties"" : {{
         ""fromSourceSystem"" : false,
         ""columns"": [
-          {
+          {{
             ""name"": ""OrderID"",
             ""isNullable"": false,
             ""type"": ""int"",
             ""maxLength"": 4,
             ""precision"": 10
-          },
-          {
+          }},
+          {{
             ""name"": ""CustomerID"",
             ""isNullable"": true,
             ""type"": ""int"",
             ""maxLength"": 4,
             ""precision"": 10
-          },
-          {
+          }},
+          {{
             ""name"": ""OrderDate"",
             ""isNullable"": true,
             ""type"": ""datetime"",
             ""maxLength"": 8,
             ""precision"": 23
-          }
+          }}
         ]
-      }
-    },
+      }}
+    }},
     ""tags"": [
-      {
-        ""properties"": {
+      {{
+        ""properties"": {{
           ""tag"": ""ADCSample"",
           ""fromSourceSystem"": false,
           ""key"": ""64f9f46341774e3bbf413fea50c98766--adcsample""
-        }
-      }
+        }}
+      }}
     ]
-  }
-}
+  }}
+}}
 ";
         private const string SampleRelationshipAC = @"
 {{
@@ -227,9 +221,7 @@ namespace AdcPublishRelationships
       }}
     ],
     ""lastRegisteredBy"": {{
-      ""upn"": ""user1@contoso.com"",
-      ""firstName"": ""User1FirstName"",
-      ""lastName"": ""User1LastName""
+      ""upn"": ""{2}""
     }}
   }},
   ""annotations"" : {{
@@ -260,9 +252,7 @@ namespace AdcPublishRelationships
       }}
     ],
     ""lastRegisteredBy"": {{
-      ""upn"": ""user1@contoso.com"",
-      ""firstName"": ""User1FirstName"",
-      ""lastName"": ""User1LastName""
+      ""upn"": ""{2}""
     }}
   }},
   ""annotations"" : {{
@@ -293,15 +283,17 @@ namespace AdcPublishRelationships
 
         static void Main(string[] args)
         {
+            string upn = AccessToken().Result.UserInfo.DisplayableId;
+
             // Publish assets
             Console.WriteLine("Publishing asset A");
-            string assetALocation = PublishToCatalog(AdcApi_Resource_TableAsset, SampleAssetA);
+            string assetALocation = PublishToCatalog(AdcApi_Resource_TableAsset, string.Format(SampleAssetA, upn));
 
             Console.WriteLine("Publishing asset B");
-            string assetBLocation = PublishToCatalog(AdcApi_Resource_TableAsset, SampleAssetB);
+            string assetBLocation = PublishToCatalog(AdcApi_Resource_TableAsset, string.Format(SampleAssetB, upn));
 
             Console.WriteLine("Publishing asset C");
-            string assetCLocation = PublishToCatalog(AdcApi_Resource_TableAsset, SampleAssetC);
+            string assetCLocation = PublishToCatalog(AdcApi_Resource_TableAsset, string.Format(SampleAssetC, upn));
             
             // Get assets
             string assetAPayload = GetFromCatalog(assetALocation);
@@ -315,12 +307,12 @@ namespace AdcPublishRelationships
 
             // Publish relationships
             Console.WriteLine("Publishing relationship A--join->C");
-            string relationshipAC = string.Format(SampleRelationshipAC, assetAId, assetCId);
+            string relationshipAC = string.Format(SampleRelationshipAC, assetAId, assetCId, upn);
             string relationshipACLocation = PublishToCatalog(AdcApi_Resource_JoinRelationship, relationshipAC,
                 apiVersion: AdcApi_Version_Relationships);
 
             Console.WriteLine("Publishing relationship B--join->C");
-            string relationshipBC = string.Format(SampleRelationshipBC, assetBId, assetCId);
+            string relationshipBC = string.Format(SampleRelationshipBC, assetBId, assetCId, upn);
             string relationshipBCLocation = PublishToCatalog(AdcApi_Resource_JoinRelationship, relationshipBC,
                 apiVersion: AdcApi_Version_Relationships);
 
